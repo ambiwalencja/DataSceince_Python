@@ -1,4 +1,3 @@
-# import sys
 
 def check_if_divisible(num_1, num_2):
     if num_1 % num_2 == 0:
