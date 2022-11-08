@@ -4,8 +4,14 @@
 
 # https://stackoverflow.com/questions/72899/how-do-i-sort-a-list-of-dictionaries-by-a-value-of-the-dictionary
 
-def sort_by(list, key):
-    sorted_list = sorted(list, key=lambda x: x[key])
+def calculate_population_density(a_list):
+    for element in a_list:
+        element['population_density'] = element['citizens'] / element['area']
+
+def sort_by(a_list, key):
+    if key == 'population_density':
+        calculate_population_density(a_list)
+    sorted_list = sorted(a_list, key=lambda x: x[key])
     return sorted_list
 
 
@@ -17,5 +23,6 @@ list_of_countries = [
     {'name': "E", 'area': 296728746, 'citizens': 1885897, 'PPP': 9542368}
 ]
 
-for country in sort_by(list_of_countries, 'citizens'):
+
+for country in sort_by(list_of_countries, 'population_density'):  # choose from: name, area, citizens, PPP, population_density
     print(country)
