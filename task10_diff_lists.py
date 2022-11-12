@@ -9,5 +9,6 @@ def compare_lists(list1, list2):
     diff_list = sorted(diff_list, key = diff_list.count)
     return diff_list
 
-
-print(compare_lists([1,1,2,2,2,3,4,5,9,9,9,9], [3,4,5,6,7]))
+list_1 = [1,1,2,2,2,3,4,5,9,9,9,9]
+list_2 = [3,4,5,6,7]
+print(compare_lists(list_1, list_2))
