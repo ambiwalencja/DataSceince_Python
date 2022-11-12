@@ -25,4 +25,4 @@ def print_pattern(n):
                 print('$', end=' ')
         print('',end='\n')
 
-print_pattern(6)
+print_pattern(5)
