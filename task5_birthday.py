@@ -13,6 +13,6 @@ def how_old(list):
 
 
 years = [1991, 1845, 2000, 2005, 1965, 1998, 1935]
-# print(how_old(years))
-for year, age in zip(years, how_old(years)):
+# print(how_old(years)) # <-- wynik albo w postasci listy
+for year, age in zip(years, how_old(years)): # <-- albo jakiegoś fancy komunikatu
     print(f'Person born in {year} is {age} years old.')
